@@ -482,8 +482,6 @@ namespace SingleLinkedListProject
                 prev.link = px;
             else
                 Console.WriteLine(x + " not present");
-
-
         }
     }
 }
