@@ -4,6 +4,7 @@ using System.Text;
 
 namespace SingleLinkedListProject
 {
+
     class Node
     {
         public int info;

@@ -10,6 +10,8 @@ namespace SingleLinkedListProject
         {
             int choice, data, k, x;
             SingleLinkedLists list = new SingleLinkedLists();
+            list.CreateList();
+
             while (true)
             {
                 Console.WriteLine("1.Display List");
@@ -37,15 +39,15 @@ namespace SingleLinkedListProject
                     break;
                 switch (choice)
                 {
-                    case 1:list.DisplayList();
+                    case 1: list.DisplayList();
                         break;
-                    case 2:list.DisplayList();
+                    case 2: list.DisplayList();
                         break;
-                    case 3:Console.Write("Enter element to be searched");
+                    case 3: Console.Write("Enter element to be searched");
                         data = Convert.ToInt32(Console.ReadLine());
                         list.Search(data);
                         break;
-                    case 4:Console.WriteLine("Enter Element to be inserted");
+                    case 4: Console.WriteLine("Enter Element to be inserted");
                         data = Convert.ToInt32(Console.ReadLine());
                         list.InsertInBeginning(data);
                         break;
@@ -53,20 +55,20 @@ namespace SingleLinkedListProject
                         Console.WriteLine("Enter Element to be inserted");
                         data = Convert.ToInt32(Console.ReadLine());
                         list.InsertAtEnd(data); ;
-                       break;
+                        break;
                     case 6:
                         Console.WriteLine("Enter Element to be inserted");
                         data = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("Enter Element after which to be inserted:");
                         x = Convert.ToInt32(Console.ReadLine());
-                        list.InsertAfter(data);
+                        list.InsertAfter(data, x);
                         break;
                     case 7:
                         Console.WriteLine("Enter Element to be inserted");
                         data = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("Enter Element before which to be inserted:");
                         x = Convert.ToInt32(Console.ReadLine());
-                        list.InsertBefore(data,x);
+                        list.InsertBefore(data, x);
                         break;
                     case 8:
                         Console.WriteLine("Enter Element to be inserted");
@@ -75,35 +77,34 @@ namespace SingleLinkedListProject
                         k = Convert.ToInt32(Console.ReadLine());
                         list.InsertAtPosition(data, k);
                         break;
-                    case 9:list.DeleteFirstNode();
+                    case 9: list.DeleteFirstNode();
                         break;
-                    case 10:list.DeleteLastNode();
+                    case 10: list.DeleteLastNode();
                         break;
                     case 11: Console.WriteLine("Enter Element to be deleted:");
                         data = Convert.ToInt32(Console.ReadLine());
                         list.DeleteNode(data);
                         break;
-                    case 12:list.ReverseList();
+                    case 12: list.ReverseList();
                         break;
-                    case 13:list.BubbleSortExData();
+                    case 13: list.BubbleSortExData();
                         break;
-                    case 14:list.BubbleSortLinks();
+                    case 14: list.BubbleSortExLinks();
                         break;
-                    case 15:list.MergeSort();
-
+                    case 15: list.MergeSort();
                         break;
-                    case 16:Console.WriteLine("Enter element at which cycle has to be inserted  ");
+                    case 16: Console.WriteLine("Enter element at which cycle has to be inserted  ");
                         data = Convert.ToInt32(Console.ReadLine());
                         list.InsertCycle(data);
                         break;
                     case 17: if (list.HasCycle())
                             Console.WriteLine("List has a cycle");
-                    else
-                        Console.WriteLine("List does not  have a cycle");
+                        else
+                            Console.WriteLine("List does not  have a cycle");
                         break;
-                    case 18:list.RemoveCycle();
+                    case 18: list.RemoveCycle();
                         break;
-                    default:Console.WriteLine("Wrong choice:");
+                    default: Console.WriteLine("Wrong choice:");
                         break;
 
 
@@ -113,7 +114,7 @@ namespace SingleLinkedListProject
 
 
             }
-            Console.WriteLine("Existing")
+            Console.WriteLine("Existing");
         }
     }
 }
